@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react'
+import { Button } from './components/Button';
+import { Navbar } from './components/Navbar';
+import { PredictionThing } from './components/PredictionThing';
+import { Startscreen } from './components/Startscreen';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+
+  const [inStartMenu, setContent] = useState(true);
+
+  function handleStart () {
+    setContent(!inStartMenu);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main>
+      <Navbar goBackToMainMenu={handleStart} inMainMenu={inStartMenu}></Navbar>
+      {inStartMenu ?
+      <Startscreen onClick={handleStart}></Startscreen> :
+      <PredictionThing></PredictionThing>}
+    </main>
   )
 }
-
-export default App

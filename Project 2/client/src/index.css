@@ -1,69 +1,60 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* -------------------- My own styles --------------------*/
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@font-face {
+  font-family: 'Press Start 2 P';
+  src: local('Press Start 2 P'), url(./assets/PressStart2P-Regular.ttf)format('truetype');
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.navbar {
+  justify-content: space-evenly;
+  width: 100%;
 }
-a:hover {
-  color: #535bf2;
+.container.navbar-container {
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
+}
+
+.row-thing {
+  text-align: center;
+  margin: 15px;
+}
+
+.row-thing span, .row-thing Button {
+  margin: 15px 40px 15px;
+}
+
+.cool-button {
+  background-color: #f700ff;
+  border-color: #be02c4;
+}
+
+.cool-button:hover {
+  background-color: #e600ee;
+  border-color: #e600ee;
+}
+
+.btn.btn-primary.cool-button:active {
+  background-color: #be02c4;
+  border-color: #be02c4;
+}
+
+.navbar .cool-button {
+  float: left;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: 'Press Start 2 P';
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.navbar {
+  background-color: #454545;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.navbar a {
+  color: #f700ff;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.navbar a:hover, .navbar a:active {
+  color: #be02c4;
 }
