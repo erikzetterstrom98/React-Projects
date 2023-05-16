@@ -17,7 +17,7 @@ export const Navbar = ({goBackToMainMenu, inMainMenu}: Wohoo) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container navbar-container">
-        <div>
+        <div className='col'>
           {
             !inMainMenu &&
             <Button onClick={goBackToMainMenu}>
@@ -25,10 +25,10 @@ export const Navbar = ({goBackToMainMenu, inMainMenu}: Wohoo) => {
             </Button>
           }
         </div>
-        <div>
+        <div className='col text-center'>
           <h1>Draw AI</h1>
         </div>
-        <div> </div>
+        <div className='col'> </div>
       </div>
     </nav>
   )

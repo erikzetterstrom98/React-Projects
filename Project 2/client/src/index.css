@@ -17,7 +17,7 @@
 
 .row-thing {
   text-align: center;
-  margin: 15px;
+  margin-top: 15px;
 }
 
 .row-thing span, .row-thing Button {
@@ -57,4 +57,16 @@ body {
 
 .navbar a:hover, .navbar a:active {
   color: #be02c4;
+}
+
+Canvas {
+  border: #454545 solid 2px;
+  border-radius: 5px;
+  cursor: crosshair;
+  margin: 30px;
+}
+
+.guess {
+  margin-top: 20px;
+  font-size: 120%;
 }

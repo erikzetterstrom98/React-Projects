@@ -8,7 +8,7 @@ interface Props {
 export const Startscreen = ({onClick}: Props) => {
   return (
     <div className="container-fluid justify-content-center row-thing">
-        <span>Press the button to start</span>
+        <span>Press the button to start:</span>
         <Button onClick={onClick}>
             Start drawing!
         </Button>
